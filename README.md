@@ -1,50 +1,100 @@
-# React + TypeScript + Vite
+<div id="top"></div>
+<h1 align="center">OE UI</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <img alt="Github top language" src="https://img.shields.io/github/languages/top/oe-ui/oe-ui?color=56BEB8">
 
-Currently, two official plugins are available:
+  <img alt="Github language count" src="https://img.shields.io/github/languages/count/oe-ui/oe-ui?color=56BEB8">
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/oe-ui/oe-ui?color=56BEB8">
 
-## Expanding the ESLint configuration
+  <!-- <img alt="License" src="https://img.shields.io/github/license/oe-ui/oe-ui?color=56BEB8"> -->
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/{{YOUR_GITHUB_USERNAME}}/oe-ui?color=56BEB8" /> -->
 
-- Configure the top-level `parserOptions` property like this:
+  <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/{{YOUR_GITHUB_USERNAME}}/oe-ui?color=56BEB8" /> -->
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+  <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/{{YOUR_GITHUB_USERNAME}}/oe-ui?color=56BEB8" /> -->
+</p>
+
+<!-- Status -->
+<!-- <h4 align="center">
+	🚧  Oe Ui 🚀 Under construction...  🚧
+</h4>
+<hr> -->
+
+<p align="center">
+  <a href="#dart-about">About</a> |
+  <a href="#rocket-technologies">Technologies</a> |
+  <a href="#white_check_mark-requirements">Requirements</a> |
+  <a href="#checkered_flag-starting">Starting</a> |
+  <a href="#technologist-authors" >Authors</a> |
+  <a href="#card_index_dividers-folder-structure" >Folder Structure</a>
+</p>
+
+<br>
+
+## :dart: About
+
+simple ui component library
+
+## :rocket: Technologies
+
+- [React](https://pt-br.reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+
+## :white_check_mark: Requirements
+
+- [Git](https://git-scm.com)
+- [Node v20.10.0](https://nodejs.org/en/)
+
+## :checkered_flag: Starting
+
+```bash
+# Clone this project
+$ git clone https://github.com/oe-ui/oe-ui
+
+# Access
+$ cd oe-ui
+
+# Install dependencies
+$ npm install
+
+# Run the project
+$ npm start
+
+# The server will initialize in the <http://localhost:5173>
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+<!-- ## :memo: License
+This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file. -->
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## :technologist: Authors
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+<a href="https://github.com/Melonisjy" target="_blank">Melonisjy</a>
+
+<a href="https://github.com/ohohoh3275" target="_blank">ohohoh3275</a>
+
+## :card_index_dividers: Folder Structure
+
 ```
+oe-ui
+├─ public
+│  └─ vite.svg
+├─ src
+│  ├─ App.css
+│  ├─ App.tsx
+│  ├─ assets
+│  │  └─ react.svg
+│  ├─ index.css
+│  ├─ main.tsx
+│  └─ vite-env.d.ts
+├─ tsconfig.json
+├─ eslint.config.js
+├─ index.html
+├─ package-lock.json
+├─ package.json
+└─ vite.config.ts
+```
+
+<a href="#top">Back to top</a>
