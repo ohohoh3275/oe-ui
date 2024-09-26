@@ -1,9 +1,10 @@
 ---
 name: Feature Request
-description: Suggest a new feature for the application
+about: When adding a new feature
 title: "[New Feature] "
 labels: enhancement
-assignees: ""
+assignees: Melonisjy
+
 ---
 
 ## ✏ 설명
