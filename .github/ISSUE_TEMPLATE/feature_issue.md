@@ -1,9 +1,9 @@
 ---
 name: Feature Request
 about: When adding a new feature
-title: "[New Feature] "
+title: "[New Feature]"
 labels: enhancement
-assignees: Melonisjy
+assignees: ""
 
 ---
 
