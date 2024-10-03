@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "editorconfig.editorconfig",
+    "clinyong.vscode-css-modules",
+    "jacobcassidy.css-nesting-syntax-highlighting"
+  ]
+}

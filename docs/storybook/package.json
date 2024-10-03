@@ -1,0 +1,14 @@
+{
+    "name": "@oe-ui/storybook",
+    "private": true,
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "storybook dev -p 6006"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {}
+}
