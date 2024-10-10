@@ -1,0 +1,37 @@
+.calender__wrapper {
+}
+
+.calendar__body {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.today {
+    background-color: #7686bf;
+}
+
+.calendar-days-first-space {
+    .one {
+        grid-column-start: 1;
+    }
+
+    .two {
+        grid-column-start: 2;
+    }
+
+    .three {
+        grid-column-start: 3;
+    }
+
+    .four {
+        grid-column-start: 4;
+    }
+
+    .five {
+        grid-column-start: 5;
+    }
+
+    .six {
+        grid-column-start: 6;
+    }
+}
