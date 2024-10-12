@@ -2,36 +2,25 @@
 }
 
 .calendar__body {
+    width: 240px;
+    /* width: "100px"; */
     display: grid;
     grid-template-columns: repeat(7, 1fr);
 }
 
-.today {
-    background-color: #7686bf;
+.calender__today {
+    background-color: #b8e382;
 }
 
-.calendar-days-first-space {
-    .one {
-        grid-column-start: 1;
-    }
+.calender__day {
+    border: 1px solid black;
 
-    .two {
-        grid-column-start: 2;
+    &:hover {
+        background-color: #94c1ae;
     }
+}
 
-    .three {
-        grid-column-start: 3;
-    }
-
-    .four {
-        grid-column-start: 4;
-    }
-
-    .five {
-        grid-column-start: 5;
-    }
-
-    .six {
-        grid-column-start: 6;
-    }
+.calender__day--selected {
+    background-color: #94c1ae;
+    color: white;
 }
