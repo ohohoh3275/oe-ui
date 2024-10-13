@@ -9,7 +9,7 @@ export function Datepicker(props: DatepickerProps) {
     const calenderRef = useRef<HTMLDivElement>(null);
 
     const closeDatepicker = (e: MouseEvent) => {
-        if (calenderRef.current?.contains(e.target as Node)) {
+        if (isShow && !calenderRef.current?.contains(e.target as Node)) {
             setIsShow(false);
         }
     };
@@ -22,7 +22,7 @@ export function Datepicker(props: DatepickerProps) {
                 className={C.datepicker__input}
                 onClick={() => setIsShow(!isShow)}
             ></div>
-            <div ref={calenderRef}>
+            <div className={C.datepicker} ref={calenderRef}>
                 <Calendar isShow={isShow} />
             </div>
         </div>
