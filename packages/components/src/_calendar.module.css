@@ -1,4 +1,11 @@
 .calender__wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+}
+
+.calender__wrapper--show {
+    display: block;
 }
 
 .calendar__body {

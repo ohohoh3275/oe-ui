@@ -1,7 +1,9 @@
 import { MouseEvent, useEffect, useState } from "react";
 import C from "./_calendar.module.css";
 
-type CalendarProps = {};
+type CalendarProps = {
+    isShow: boolean;
+};
 
 const days = ["일", "월", "화", "수", "목", "금", "토"];
 
@@ -72,7 +74,11 @@ export function Calendar(props: CalendarProps) {
     };
 
     return (
-        <div>
+        <div
+            className={`${C.calender__wrapper} ${
+                props.isShow === true && C["calender__wrapper--show"]
+            }`}
+        >
             {year + " " + month + " " + day}
             <div></div>
             <button
@@ -123,49 +129,41 @@ export function Calendar(props: CalendarProps) {
                 {"▷"}
             </button>
 
-            <div className={C.calendar__wrapper}>
-                <div className={C.calendar__body}>
-                    {days.map((day) => {
-                        return <div key={day}>{day}</div>;
-                    })}
-                </div>
-                <div className={C.calendar__body}>
-                    {Array.from({ length: Number(firstDayOfMonth) }).map(
-                        (_, i) => {
-                            return <div key={i}></div>;
-                        }
-                    )}
-                    {Array.from({ length: Number(lastDateOfMonth) }).map(
-                        (_, i) => {
-                            return (
-                                <div
-                                    key={i}
-                                    data-currentdate={`${year}${month}${i + 1}`}
-                                    className={`${C.calender__day} ${
-                                        Number(day) === i + 1 &&
-                                        C.calender__today
-                                    } ${
-                                        startDate ===
-                                            `${year}${month}${i + 1}` &&
-                                        C["calender__day--selected"]
-                                    } ${
-                                        endDate === `${year}${month}${i + 1}` &&
-                                        C["calender__day--selected"]
-                                    } ${
-                                        Number(startDate) <=
-                                            Number(`${year}${month}${i + 1}`) &&
-                                        Number(endDate) >=
-                                            Number(`${year}${month}${i + 1}`) &&
-                                        C["calender__day--selected"]
-                                    }`}
-                                    onClick={(e: any) => onSelectDate(e)}
-                                >
-                                    {i + 1}
-                                </div>
-                            );
-                        }
-                    )}
-                </div>
+            <div className={C.calendar__body}>
+                {days.map((day) => {
+                    return <div key={day}>{day}</div>;
+                })}
+            </div>
+            <div className={C.calendar__body}>
+                {Array.from({ length: Number(firstDayOfMonth) }).map((_, i) => {
+                    return <div key={i}></div>;
+                })}
+                {Array.from({ length: Number(lastDateOfMonth) }).map((_, i) => {
+                    return (
+                        <div
+                            key={i}
+                            data-currentdate={`${year}${month}${i + 1}`}
+                            className={`${C.calender__day} ${
+                                Number(day) === i + 1 && C.calender__today
+                            } ${
+                                startDate === `${year}${month}${i + 1}` &&
+                                C["calender__day--selected"]
+                            } ${
+                                endDate === `${year}${month}${i + 1}` &&
+                                C["calender__day--selected"]
+                            } ${
+                                Number(startDate) <=
+                                    Number(`${year}${month}${i + 1}`) &&
+                                Number(endDate) >=
+                                    Number(`${year}${month}${i + 1}`) &&
+                                C["calender__day--selected"]
+                            }`}
+                            onClick={(e: any) => onSelectDate(e)}
+                        >
+                            {i + 1}
+                        </div>
+                    );
+                })}
             </div>
         </div>
     );
