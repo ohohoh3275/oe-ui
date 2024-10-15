@@ -105,6 +105,9 @@ importers:
       vite:
         specifier: ^5.4.8
         version: 5.4.8(@types/node@22.7.4)
+      vitest:
+        specifier: ^1.0.0
+        version: 1.6.0(@types/node@22.7.4)
 
   docs/storybook: {}
 
@@ -115,15 +118,6 @@ importers:
         version: 18.3.1
 
   packages/config: {}
-
-  packages/test:
-    devDependencies:
-      react:
-        specifier: 'catalog:'
-        version: 18.3.1
-      vitest:
-        specifier: ^1.0.0
-        version: 1.6.0(@types/node@22.7.4)
 
 packages:
 
