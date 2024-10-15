@@ -41,7 +41,7 @@ export function Calendar(props: CalendarProps) {
             setMonth("12");
             setYear((Number(year) - 1).toString());
         } else if (Number(month) > 12) {
-            setMonth("1");
+            setMonth("01");
             setYear((Number(year) + 1).toString());
         }
 
@@ -142,20 +142,46 @@ export function Calendar(props: CalendarProps) {
                     return (
                         <div
                             key={i}
-                            data-currentdate={`${year}${month}${i + 1}`}
+                            data-currentdate={`${year}${month
+                                .toString()
+                                .padStart(2, "0")}${(i + 1)
+                                .toString()
+                                .padStart(2, "0")}`}
                             className={`${C.calender__day} ${
                                 Number(day) === i + 1 && C.calender__today
                             } ${
-                                startDate === `${year}${month}${i + 1}` &&
+                                startDate ===
+                                    `${year}${month
+                                        .toString()
+                                        .padStart(2, "0")}${(i + 1)
+                                        .toString()
+                                        .padStart(2, "0")}` &&
                                 C["calender__day--selected"]
                             } ${
-                                endDate === `${year}${month}${i + 1}` &&
+                                endDate ===
+                                    `${year}${month
+                                        .toString()
+                                        .padStart(2, "0")}${(i + 1)
+                                        .toString()
+                                        .padStart(2, "0")}` &&
                                 C["calender__day--selected"]
                             } ${
                                 Number(startDate) <=
-                                    Number(`${year}${month}${i + 1}`) &&
+                                    Number(
+                                        `${year}${month
+                                            .toString()
+                                            .padStart(2, "0")}${(i + 1)
+                                            .toString()
+                                            .padStart(2, "0")}`
+                                    ) &&
                                 Number(endDate) >=
-                                    Number(`${year}${month}${i + 1}`) &&
+                                    Number(
+                                        `${year}${month
+                                            .toString()
+                                            .padStart(2, "0")}${(i + 1)
+                                            .toString()
+                                            .padStart(2, "0")}`
+                                    ) &&
                                 C["calender__day--selected"]
                             }`}
                             onClick={(e: any) => onSelectDate(e)}
