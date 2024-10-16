@@ -1,0 +1,31 @@
+.calender__wrapper {
+    display: none;
+}
+
+.calender__wrapper--show {
+    display: block;
+}
+
+.calendar__body {
+    width: 240px;
+    /* width: "100px"; */
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.calender__today {
+    background-color: #b8e382;
+}
+
+.calender__day {
+    border: 1px solid black;
+
+    &:hover {
+        background-color: #94c1ae;
+    }
+}
+
+.calender__day--selected {
+    background-color: #94c1ae;
+    color: white;
+}
