@@ -4,6 +4,7 @@
         "module": "Node16",
         "moduleResolution": "Node16",
         "jsx": "react-jsx",
-        "strict": true
+        "strict": true,
+        "allowImportingTsExtensions": true
     }
 }
