@@ -1,8 +1,10 @@
 import css from "./_button.module.css";
 
-type ButtonProps = {
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     text?: string;
-};
+    size?: "xs" | "small" | "medium" | "large" | "xl";
+    variant?: "default" | "success" | "warning" | "error";
+}
 
 export function Button(props: ButtonProps) {
     const { text } = props;
