@@ -78,6 +78,7 @@ export function Calendar(props: CalendarProps) {
             className={`${C.calender__wrapper} ${
                 props.isShow === true && C["calender__wrapper--show"]
             }`}
+            data-testid="calendar"
         >
             {year + " " + month + " " + day}
             <div></div>

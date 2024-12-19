@@ -8,7 +8,8 @@
         "build": "turbo run build",
         "lint": "eslint .",
         "preview": "vite preview",
-        "test:vitest": "vitest"
+        "test:vitest": "vitest",
+        "test:playwright": "playwright test"
     },
     "packageManager": "pnpm@9.0.0",
     "engines": {
@@ -34,7 +35,9 @@
         "@storybook/theming": "^8.3.4",
         "@types/react": "^18.3.10",
         "@types/react-dom": "^18.3.0",
+        "@types/node": "^17.0.0",
         "@vitejs/plugin-react-swc": "^3.7.1",
+        "@playwright/test": "^1.48.1",
         "autoprefixer": "^10.4.20",
         "eslint": "^9.11.1",
         "eslint-plugin-react-hooks": "5.1.0-rc-fb9a90fa48-20240614",
