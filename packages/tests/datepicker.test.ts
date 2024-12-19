@@ -1,5 +1,12 @@
 import { test, expect } from "@playwright/test";
 
+test("goto test for github action", async({
+    page,
+}) => {
+    await page.goto("https://github.com/ohohoh3275");
+})
+
+
 test("calendar is visible after datepicker-input is clicked", async ({
     page,
 }) => {
