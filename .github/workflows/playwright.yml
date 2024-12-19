@@ -16,16 +16,13 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: lts/*
-      - uses: microsoft/playwright-github-action@v1
-      - name: check if checked-out
-        run: ls -la
+      - name: playwright install npx
+        run: npx playwright install --with-deps
       - name: Install pnpm
         run: npm install -g pnpm
       - name: Install Playwright
         run: pnpm create playwright --test-dir=test --lang=ts --browsers
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
-      - name: npx playwright install
-        run: npx playwright install
       - name: Run Playwright tests
         run: npx playwright test
