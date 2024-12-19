@@ -25,6 +25,6 @@ jobs:
       - name: Install Playwright
         run: pnpm create playwright --test-dir=test --lang=ts --browsers
       - name: pnpm dev
-        run: pnpm dev
+        run: nohup pnpm dev &
       - name: Run Playwright tests
         run: npx playwright test
