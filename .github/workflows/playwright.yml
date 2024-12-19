@@ -1,0 +1,30 @@
+name: Playwright Tests
+on:
+  push:
+    branches: [test]
+  pull_request:
+    branches: [test]
+jobs:
+  test:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: packages/tests # The working directory path
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+      - name: Install pnpm
+        run: npm install -g pnpm
+      - name: Install dependencies
+        run: pnpm install --no-frozen-lockfile
+      - name: playwright install npx
+        run: npx playwright install --with-deps
+      - name: Install Playwright
+        run: pnpm create playwright --test-dir=test --lang=ts --browsers
+      - name: Run pnpm dev
+        run: nohup pnpm dev &
+      - name: Run Playwright tests
+        run: npx playwright test

@@ -20,6 +20,7 @@ export function Datepicker(props: DatepickerProps) {
         >
             <div
                 className={C.datepicker__input}
+                data-testid="datepicker-input"
                 onClick={() => setIsShow(!isShow)}
             ></div>
             <div className={C.datepicker} ref={calenderRef}>
